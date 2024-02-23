@@ -1,0 +1,76 @@
+***********Customer Table Creation*********************
+
+
+Create table Customer(   
+          customer_id int primary key, 
+          Fname varchar(20), 
+          Lname varchar(20),
+          Email varchar(30), 
+         phoneno varchar(10)
+         );
+
+
+
+
+*****************Inserting Values*********************
+
+insert into Customer values(101,'Akanksha','Khairkar','akankshak30@gmail.com',7620180173);
+
+insert into Customer values (102,'Amruta','kale','kale20@gmail.com',4444567891);
+
+insert into Customer values (103,'Anvii','thakre','anvii40@gmail.com',4555867245);
+
+insert into Customer values(104,'Mayuri','lawhale','mayuri50@gmail.com',5678910896);
+'
+insert into Customer values (105,'Anvit','amle','anvit60@gmail.com',1234569978);
+
+insert into Customer values(106,'shruti','kadu','shruti70@gmail.com',9022557825);
+
+insert into Customer values (107,'shreya','padole','shreya80@gmail.com',9999444678);
+
+insert into Customer values (108,'Shreyash','more','more90@gmail.com',7775678923);
+
+
+
+***********************Creating Order Table****************
+
+create table orders(  
+    order_id int primary key,  
+    Customer_id INT,  
+    order_date DATE,  
+    product_name VARCHAR(50),  
+    quantity varchar (10),  
+    total_amount varchar(30),  
+    FOREIGN KEY (Customer_id) REFERENCES customer(Customer_id)  
+ );
+
+
+*************************Inaeting Records in order table*******************   
+
+insert into  orders (order_id,Customer_id,order_date,product_name,quantity,total_amount) 
+values(1, 101,  To_Date('2024-01-11','YYYY-MM-DD'), 'Activa 5G', 1, 76234);
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(2, 102, To_Date('2024-01-12','YYYY-MM-DD'), 'Honda Dio',1, 78284);
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(3, 103, To_Date('2024-01-13','YYYY-MM-DD'), 'Jupiter',1, 79254);
+
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(4, 104, To_Date('2024-01-14','YYYY-MM-DD'), 'Activa 6G',1, 90264);
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(5, 105, To_Date('2024-01-15','YYYY-MM-DD'),'Hero Destini',1, 91254);
+
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(6, 106, To_Date('2024-01-16','YYYY-MM-DD'),'Yamaha Fascino',2, 76234);
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(7, 107, To_Date('2024-01-17','YYYY-MM-DD'),'Acesss 125',1, 76289);
+
+insert into  orders ( order_id,customer_id,order_date,product_name,quantity,total_amount) 
+values(8, 108, To_Date('2024-01-18','YYYY-MM-DD'),'Pleasure',1, 78254);
+
+

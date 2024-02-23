@@ -1,0 +1,32 @@
+
+-------------------Procedure--------------
+
+create or replace  procedure  customerdetails
+ As  
+Begin 
+       update customer 
+    set PHONENO=4444567891
+    where Customer_ID=102; 
+End; 
+Procedure created.
+
+
+
+---------------Execution-----------
+Call procedure:-
+
+call Customerdetails
+
+
+
+-------------View---------
+
+
+CREATE  VIEW Cust_info as 
+    Select Customer_ID , FNAME , LNAME 
+from Customer;
+
+
+------------Execution---------
+
+Select* from Customer;
